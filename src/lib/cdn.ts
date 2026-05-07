@@ -8,7 +8,7 @@
 export function getCDNUrl(supabaseUrl: string | null | undefined): string {
   if (!supabaseUrl) return '';
   
-  const CDN_DOMAIN = process.env.NEXT_PUBLIC_CDN_URL || 'https://cdn.example.com';
+  const CDN_DOMAIN = process.env.NEXT_PUBLIC_CDN_URL;
   
   // If it's already a CDN URL or not a supabase storage URL, return as is
   if (!supabaseUrl.includes('supabase.co/storage/v1/object/public/')) {
