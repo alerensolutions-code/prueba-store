@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ShoppingBag, Search, Menu } from 'lucide-react';
+import { ShoppingBag, Search, Menu, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
@@ -31,6 +31,9 @@ export default function Navbar() {
 
           {/* Icons */}
           <div className="flex items-center space-x-4">
+            <Link href="/admin" title="Admin Dashboard" className="p-2 text-gray-400 hover:text-black transition-colors">
+              <Settings className="w-5 h-5" />
+            </Link>
             <button className="p-2 text-gray-600 hover:text-black transition-colors">
               <Search className="w-5 h-5" />
             </button>
